@@ -1,0 +1,25 @@
+
+# Dependências do Node.js
+node_modules/
+
+# Resultados e relatórios do Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Arquivos temporários
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Relatórios de cobertura
+coverage/
+
+# Arquivos de configuração locais do VS Code
+.vscode/*
+!.vscode/extensions.json

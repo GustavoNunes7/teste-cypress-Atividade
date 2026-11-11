@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Cypress</title>
+</head>
+<body>
+    <h1>Minha página de teste</h1>
+
+    <p>Bem-vindo ao meu site!</p>
+
+    <button id="botao">Clique aqui</button>
+    <p id="resultado">Nenhum clique realizado.</p>
+
+    <a href="#sobre">Ir para Sobre</a>
+
+    <h2 id="sobre">Sobre</h2>
+    <p>Esta página está sendo testada com Cypress.</p>
+
+    <h2>Formulário</h2>
+
+    <form id="formulario">
+        <input id="nome" placeholder="Seu nome">
+        <input id="email" type="email" placeholder="Seu e-mail">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <script>
+        document.getElementById("botao").onclick = () => {
+            document.getElementById("resultado").textContent =
+                "Botão funcionando!";
+        };
+
+        document.getElementById("formulario").onsubmit = (event) => {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            document.getElementById("mensagem").textContent =
+                nome && email
+                ? "Formulário enviado com sucesso!"
+                : "Preencha todos os campos!";
+        };
+    </script>
+</body>
+</html>
